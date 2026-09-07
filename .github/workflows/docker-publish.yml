@@ -39,12 +39,6 @@ jobs:
         with:
           images: ghcr.io/tomohiko-yamashita/publish-docker-images/stackoverflown
       - name: Build and push Docker image
-        uses: docker/build-push-action@v6
-        with:
-          context: .
-          push: true
-          platforms: linux/amd64,linux/arm64
-      - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
           context: .
